@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Simple Timer</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="glass card">
+    <h1 class="title">Simple Timer</h1>
+    <p id="error" class="error" role="alert"></p>
+
+    <section class="disc glass" id="disc">
+      <svg viewBox="0 0 220 220" aria-hidden="true">
+        <defs>
+          <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#a5f3fc"/>
+            <stop offset="100%" stop-color="#ddd6fe"/>
+          </linearGradient>
+        </defs>
+        <circle class="track" cx="110" cy="110" r="94"/>
+        <circle class="bar" id="bar" cx="110" cy="110" r="94"/>
+      </svg>
+      <div class="remain" id="remain">00:00:00</div>
+    </section>
+
+    <section class="setter glass" id="setter">
+      <div class="unit"><span class="label">時間</span><span class="seg" data-unit="h" id="seg-h" tabindex="0">00</span></div>
+      <span class="colon">:</span>
+      <div class="unit"><span class="label">分</span><span class="seg" data-unit="m" id="seg-m" tabindex="0">00</span></div>
+      <span class="colon">:</span>
+      <div class="unit"><span class="label">秒</span><span class="seg" data-unit="s" id="seg-s" tabindex="0">00</span></div>
+    </section>
+
+    <div class="actions" id="actions"></div>
+
+    <footer class="footer">
+      <a href="https://github.com/stone-block9965/simple-timer" target="_blank" rel="noopener">©stone block 2026</a>
+    </footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
